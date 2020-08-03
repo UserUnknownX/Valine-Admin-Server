@@ -49,7 +49,7 @@ app.get("/", function (req, res) {
       INFO: process.env.INFO ? process.env.INFO : "",
       favicon: process.env.FAVICON
         ? process.env.FAVICON
-        : "https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@v3.2.3/butterfly/img/favicon.ico",
+        : "https://userunknown.now.sh/img/avatar.ico",
     });
   }
 });
@@ -72,6 +72,7 @@ app.post("/login", function (req, res) {
     },
     function (error) {
       // 登录失败，跳转到登录页面
+      console.log("登录失败>_<");
       res.redirect("/");
     }
   );
