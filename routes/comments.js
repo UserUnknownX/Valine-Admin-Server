@@ -18,7 +18,7 @@ router.get("/", function (req, res, next) {
       .then(
         function (results) {
           res.render("comments", {
-            title: process.env.SITE_NAME + "上的评论",
+            title: process.env.SITE_NAME,
             comment_list: results,
             moment: moment,
             zone: String(process.env.LEANCLOUD_REGION),
@@ -43,7 +43,7 @@ router.get("/", function (req, res, next) {
       )
       .catch(next);
   } else {
-    console.log("有用户成功找到了后台地址！", new Date());
+    console.log("有用户成功找到了后台地址！/fad", new Date());
     res.redirect("/", {
       favicon: process.env.FAVICON
         ? process.env.FAVICON
