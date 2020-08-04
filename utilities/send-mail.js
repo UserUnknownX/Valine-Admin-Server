@@ -181,7 +181,7 @@ ${$(
 
 //此处为禁用站长提醒，（已开启提醒功能）qwq
 // 发送邮件通知他人
-//exports.send = (currentComment, parentComment) => {
+exports.send = (currentComment, parentComment) => {
   // 站长被 @ 不需要提醒
   //if (
     //parentComment.get("mail") === process.env.TO_EMAIL ||
