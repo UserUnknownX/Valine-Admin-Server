@@ -87,7 +87,7 @@ exports.notice = (comment) => {
       }
       comment.set("isNotified", true);
       comment.save();
-      console.log("收到一条评论, 已邮件提醒站长");
+      console.log("收到一条评论, 已发送邮件提醒");
     });
   }
 
@@ -179,16 +179,17 @@ ${$(
   }
 };
 
+//此处为禁用站长提醒，（已开启提醒功能）qwq
 // 发送邮件通知他人
-exports.send = (currentComment, parentComment) => {
+//exports.send = (currentComment, parentComment) => {
   // 站长被 @ 不需要提醒
-  if (
-    parentComment.get("mail") === process.env.TO_EMAIL ||
-    parentComment.get("mail") === process.env.BLOGGER_EMAIL ||
-    parentComment.get("mail") === process.env.SMTP_USER
-  ) {
-    return;
-  }
+  //if (
+    //parentComment.get("mail") === process.env.TO_EMAIL ||
+    //parentComment.get("mail") === process.env.BLOGGER_EMAIL ||
+    //parentComment.get("mail") === process.env.SMTP_USER
+  //) {
+    //return;
+  //}
   const emailSubject =
     "📌 哇！「" + process.env.SITE_NAME + "」上有人回复了你啦！快点我！💦";
   const main_color = process.env.MAIN_COLOR ? process.env.MAIN_COLOR : "orange";
@@ -227,7 +228,7 @@ exports.send = (currentComment, parentComment) => {
       currentComment.get("nick") +
         " @了" +
         parentComment.get("nick") +
-        ", 已通知."
+        ", 已邮件通知."
     );
   });
 };
