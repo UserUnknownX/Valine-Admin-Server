@@ -1,3 +1,5 @@
+document.write("<script language=javascript src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>");
+
 "use strict";
 const router = require("express").Router();
 const AV = require("leanengine");
