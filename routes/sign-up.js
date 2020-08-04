@@ -29,7 +29,6 @@ router.post("/", function (req, res, next) {
   q.equalTo("email", adminMail);
   q.find().then(function (results) {
     if (results.length > 0) {
-      alert("Someone has registered!");
       res.redirect("/");
     } else {
       const user = new AV.User();
