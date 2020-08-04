@@ -19,16 +19,16 @@
         </p>
         <hr />
         <form method="post" action="/sign-up" class="gh-signin gh-signup">
-            <label>登录名</label><input placeholder="登录名" tabindex="1" name="username" autofocus="" type="text"
+            <label>登录名</label><input placeholder="登录名" tabindex="1" name="username" readonly="readonly" placeholder="管理员已注册，无法再次注册" autofocus="" type="text"
                 class="gh-input">
             <label>邮箱(只读)</label><input tabindex="2" name="email" readonly="readonly" value="<%= email %>"
                 placeholder="<%= email %>" type="text" class="gh-input">
-            <label>密码</label><input tabindex="3" name="password" placeholder="密码" type="password"
+            <label>密码</label><input tabindex="3" name="password" readonly="readonly" placeholder="管理员已注册，无法再次注册" type="password"
                 class="password gh-input ember-view">
-            <input tabindex="4" type="submit" class="login-button" value="确认设置">
+            <input tabindex="4" type="submit" class="login-button" value="确认设置"></disabled>
         </form>
         <div class="footer">
-            <p>Modified<a href="https://www.antmoe.com">By Dreamy.TZK</a></p>
+            <p>Modified <a href="https://www.antmoe.com">By Dreamy.TZK</a>, Revision Again By <a href="https://userunknownx.github.io">UserUnknown</a></p>
         </div>
 </body>
 
