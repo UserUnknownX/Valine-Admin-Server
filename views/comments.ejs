@@ -4,7 +4,7 @@
 <head>
     <title><%= title %>的评论管理系统</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="shortcut icon" href="<%= favicon %>">
+    <link rel="shortcut icon" href="https://userunknown.now.sh/img/avatar.ico">
 </head>
 
 <body>
@@ -12,7 +12,7 @@
         <div class="header">
             <div class="title"><span><%= title %></span></div>
 
-            <div class="logout-wrapper"><a href="/logout">退出登录</a></div>
+            <div class="logout-wrapper"><a href="/logout">Logout</a></div>
         </div>
 
         <ul class="content">
@@ -57,7 +57,7 @@
                         target="_blank" rel="nofollow">查看评论</a>
                     <% if (comment_list[i].get('rid')) { %>
                     <% if(comment_list[i].get('isNotified')) { %>
-                    <span class="spacer">•</span><span class="vnoticed">通知已送达✔</span>
+                    <span class="spacer">•</span><span class="vnoticed">通知已送达⊙∀⊙</span>
                     <% } else { %>
                     <span class="spacer">•</span>
                     <a href="/comments/resend-email?id=<%= comment_list[i].get('objectId') %>" rel="nofollow">重发通知邮件</a>
@@ -70,5 +70,4 @@
         </ul>
     </div>
 </body>
-
 </html>
