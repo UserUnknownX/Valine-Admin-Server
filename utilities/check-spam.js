@@ -124,6 +124,7 @@ exports.submitHam = (comment) => {
           }
         }
       );
+      console.log("Akismet key 正常!");
     } else console.log("Akismet key 异常!");
   });
 };
