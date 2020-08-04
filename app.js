@@ -65,7 +65,6 @@ app.post("/login", function (req, res) {
       const adminMail = process.env.BLOGGER_EMAIL || process.env.SMTP_USER;
       if (user.get("email") === adminMail) {
         res.saveCurrentUser(user); // 保存当前用户到 Cookie
-        console.log("登录成功⊙∀⊙");
         res.redirect("/comments");
       } else {
         res.redirect("/");
