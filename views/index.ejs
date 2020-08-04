@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>LeanCloud评论管理</title>
+    <title>Path Unknown</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="shortcut icon" href="<%= favicon %>">
 </head>
@@ -10,16 +10,24 @@
 <body>
 
     <div class="sign-in-wrap">
-        <p class="title">LeanCloud评论管理</p>
+        <p class="title">Valine评论管理</p>
         <form method="post" action="/login" class="gh-signin">
-            <input tabindex="1" name="username" placeholder="管理员邮箱" autofocus="" type="text" class="gh-input">
-            <input tabindex="2" name="password" placeholder="密码" type="password" class="password gh-input ember-view">
+            <input tabindex="1" name="username" placeholder="User Name / E-mail" autofocus="" type="text" class="gh-input">
+            <input tabindex="2" name="password" placeholder="Password" type="password" class="password gh-input ember-view">
 
-            <input tabindex="3" type="submit" class="login-button" value="登录">
+            <input tabindex="3" type="submit" class="login-button" value="Login">
         </form>
         <div class="footer">
+            </br>
             <p>Modified<a href="https://www.antmoe.com">By Dreamy.TZK</a></p>
-            <p><a href="http://www.beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer"><%= ICP %></a> </p>
+            <p>Revision Again By <a href="https://userunknownx.github.io">UserUnknown</a></p>
+            </br>
+            <p><a href="https://icp.gov.moe/?keyword=20204040" title="仅供娱乐" target="_blank" rel="noopener noreferrer"><%= ICP %></a>萌ICP备 20204040号</p>
+            </br>
+            </br>
+            </br>
+            </br>
+            <p>Host on <a href="https://leancloud.app">LeanCloud</a></p>
             <%- INFO %>
         </div>
         <script>
